@@ -19,7 +19,6 @@
         android:paddingTop="8dp">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:visibility="gone"
             android:id="@+id/rv_menus"
             android:layout_width="match_parent"
             android:layout_height="89dp"

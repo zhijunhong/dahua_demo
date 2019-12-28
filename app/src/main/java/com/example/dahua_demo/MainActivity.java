@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void bindEvent() {
-        mDeviceAdapter = new HomeDeviceAdapter(R.layout.item_home_model);
+        mDeviceAdapter = new HomeDeviceAdapter(R.layout.item_home_device);
         //设备列表内容
         mRvDevicesList.setLayoutManager(new LinearLayoutManager(this));
         mDeviceAdapter.setHasStableIds(true);
