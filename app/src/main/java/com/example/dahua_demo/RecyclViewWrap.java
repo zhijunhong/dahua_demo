@@ -27,7 +27,7 @@ public class RecyclViewWrap extends RecyclerView {
     public boolean onInterceptTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-
+                mOnActionDownListener.onActionDown();
                 break;
         }
 
