@@ -68,7 +68,7 @@
         <!--            android:layout_width="match_parent"-->
         <!--            android:layout_height="wrap_content" />-->
 
-        <com.example.dahua_demo.RecyclViewWrap
+        <com.example.dahua_demo.widget.RecyclViewWrap
             android:id="@+id/rv_devices_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

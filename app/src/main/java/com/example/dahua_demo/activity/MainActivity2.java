@@ -1,4 +1,4 @@
-package com.example.dahua_demo;
+package com.example.dahua_demo.activity;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,6 +13,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.dahua_demo.Device;
+import com.example.dahua_demo.HomeDeviceAdapter;
+import com.example.dahua_demo.NewMenuItem;
+import com.example.dahua_demo.R;
+import com.example.dahua_demo.adapter.HomeMenuAdapter;
+import com.example.dahua_demo.callback.SimpleItemTouchHelperCallback;
+import com.example.dahua_demo.widget.RecyclViewWrap;
 
 import java.util.ArrayList;
 import java.util.HashMap;

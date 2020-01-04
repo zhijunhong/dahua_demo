@@ -1,9 +1,9 @@
-package com.example.dahua_demo;
+package com.example.dahua_demo.activity;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,20 +11,26 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.dahua_demo.Device;
+import com.example.dahua_demo.R;
+import com.example.dahua_demo.adapter.HomeMenuAdapter;
+import com.example.dahua_demo.callback.SimpleItemTouchHelperCallback;
+import com.example.dahua_demo.widget.RecyclViewWrap;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private HomeMenuAdapter mHomeMenuAdapter;
     private RecyclerView mRvMenus;
-    private LinearLayout mLlHoveringPop;
+    private RelativeLayout mLlHoveringPop;
     private View mLlHoveringExpand;
     private String[] mHomeMenuNames;
     //是否强制显示头部menu滑块
     private boolean mShowHeadMenuView;
     private ItemTouchHelper mItemTouchHelper;
     private RecyclViewWrap mRvDevicesList;
-    private HomeDeviceAdapter mDeviceAdapter;
+    private com.example.dahua_demo.HomeDeviceAdapter mDeviceAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void bindEvent() {
-        mDeviceAdapter = new HomeDeviceAdapter(R.layout.item_home_device);
+        mDeviceAdapter = new com.example.dahua_demo.HomeDeviceAdapter(R.layout.item_home_device);
         //设备列表内容
         mRvDevicesList.setLayoutManager(new LinearLayoutManager(this));
         mDeviceAdapter.setHasStableIds(true);
@@ -125,14 +131,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onResume() {
         super.onResume();
-        List<NewMenuItem> menuItems = loadHomeMenu(mHomeMenuNames);
+        List<com.example.dahua_demo.NewMenuItem> menuItems = loadHomeMenu(mHomeMenuNames);
         mHomeMenuAdapter.refreshDatas(menuItems);
     }
 
-    private List<NewMenuItem> loadHomeMenu(String[] mHomeMenuNames) {
-        List<NewMenuItem> homeMenuNames = new ArrayList<>();
+    private List<com.example.dahua_demo.NewMenuItem> loadHomeMenu(String[] mHomeMenuNames) {
+        List<com.example.dahua_demo.NewMenuItem> homeMenuNames = new ArrayList<>();
         for (String str : mHomeMenuNames) {
-            NewMenuItem item = new NewMenuItem();
+            com.example.dahua_demo.NewMenuItem item = new com.example.dahua_demo.NewMenuItem();
             item.setValue(str);
             homeMenuNames.add(item);
         }

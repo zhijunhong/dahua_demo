@@ -1,7 +1,12 @@
-package com.example.dahua_demo;
+package com.example.dahua_demo.adapter;
 
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.dahua_demo.BaseSingleTypeAdapter;
+import com.example.dahua_demo.ItemTouchHelperAdapter;
+import com.example.dahua_demo.NewMenuItem;
+import com.example.dahua_demo.R;
 
 import java.util.Collections;
 
@@ -17,7 +22,7 @@ public class HomeMenuAdapter extends BaseSingleTypeAdapter<NewMenuItem, HomeMenu
     }
 
     @Override
-    public void bindDataToViewHolder(HomeMenuViewHolder holder, NewMenuItem foo, int position) {
+    public void bindDataToViewHolder(HomeMenuViewHolder holder, com.example.dahua_demo.NewMenuItem foo, int position) {
         holder.mValue.setText(foo.getValue());
     }
 
@@ -34,7 +39,7 @@ public class HomeMenuAdapter extends BaseSingleTypeAdapter<NewMenuItem, HomeMenu
         notifyItemRemoved(position);
     }
 
-    public static class HomeMenuViewHolder extends BaseViewHolder {
+    public static class HomeMenuViewHolder extends com.example.dahua_demo.BaseViewHolder {
         private TextView mValue;
 
         public HomeMenuViewHolder(View itemView) {
