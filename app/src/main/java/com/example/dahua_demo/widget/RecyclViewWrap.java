@@ -1,4 +1,4 @@
-package com.example.dahua_demo;
+package com.example.dahua_demo.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;

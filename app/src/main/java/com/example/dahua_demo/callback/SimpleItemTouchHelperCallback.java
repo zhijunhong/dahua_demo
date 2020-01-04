@@ -1,10 +1,13 @@
-package com.example.dahua_demo;
+package com.example.dahua_demo.callback;
 
 import android.graphics.Canvas;
 
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.dahua_demo.base.ItemTouchHelperAdapter;
+import com.example.dahua_demo.base.ItemTouchHelperViewHolder;
 
 /**
  * An implementation of {@link ItemTouchHelper.Callback} that enables basic drag & drop and
